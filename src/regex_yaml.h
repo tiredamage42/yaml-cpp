@@ -12,6 +12,10 @@
 
 #include "yaml-cpp/dll.h"
 
+#pragma warning(push)
+#pragma warning(disable : 4251)
+#pragma warning(disable : 4275)
+
 namespace YAML {
 class Stream;
 
@@ -82,6 +86,8 @@ class YAML_CPP_API RegEx {
   std::vector<RegEx> m_params;
 };
 }  // namespace YAML
+
+#pragma warning(pop)
 
 #include "regeximpl.h"
 

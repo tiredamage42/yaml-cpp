@@ -12,6 +12,10 @@
 
 #include "yaml-cpp/dll.h"
 
+#pragma warning(push)
+#pragma warning(disable : 4251)
+#pragma warning(disable : 4275)
+
 namespace YAML {
 YAML_CPP_API std::string EncodeBase64(const unsigned char *data,
                                       std::size_t size);
@@ -67,5 +71,6 @@ class YAML_CPP_API Binary {
   std::size_t m_unownedSize;
 };
 }  // namespace YAML
+#pragma warning(pop)
 
 #endif  // BASE64_H_62B23520_7C8E_11DE_8A39_0800200C9A66

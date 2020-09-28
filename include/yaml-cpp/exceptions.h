@@ -14,6 +14,10 @@
 #include <stdexcept>
 #include <string>
 
+#pragma warning(push)
+#pragma warning(disable : 4251)
+#pragma warning(disable : 4275)
+
 namespace YAML {
 // error messages
 namespace ErrorMsg {
@@ -299,5 +303,6 @@ class YAML_CPP_API BadFile : public Exception {
   ~BadFile() YAML_CPP_NOEXCEPT override;
 };
 }  // namespace YAML
+#pragma warning(pop)
 
 #endif  // EXCEPTIONS_H_62B23520_7C8E_11DE_8A39_0800200C9A66

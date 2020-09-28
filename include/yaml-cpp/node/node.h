@@ -25,6 +25,12 @@ struct iterator_value;
 }  // namespace detail
 }  // namespace YAML
 
+
+#pragma warning(push)
+#pragma warning(disable : 4251)
+#pragma warning(disable : 4275)
+
+
 namespace YAML {
 class YAML_CPP_API Node {
  public:
@@ -144,5 +150,7 @@ YAML_CPP_API Node Clone(const Node& node);
 template <typename T>
 struct convert;
 }
+
+#pragma warning(pop)
 
 #endif  // NODE_NODE_H_62B23520_7C8E_11DE_8A39_0800200C9A66

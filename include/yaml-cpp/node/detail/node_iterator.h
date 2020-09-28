@@ -16,6 +16,10 @@
 #include <utility>
 #include <vector>
 
+#pragma warning(push)
+#pragma warning(disable : 4251)
+#pragma warning(disable : 4275)
+
 namespace YAML {
 namespace detail {
 struct iterator_type {
@@ -177,5 +181,6 @@ using node_iterator = node_iterator_base<node>;
 using const_node_iterator = node_iterator_base<const node>;
 }
 }
+#pragma warning(pop)
 
 #endif  // VALUE_DETAIL_NODE_ITERATOR_H_62B23520_7C8E_11DE_8A39_0800200C9A66

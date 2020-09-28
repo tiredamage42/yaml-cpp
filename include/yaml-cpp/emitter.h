@@ -27,6 +27,10 @@ class Binary;
 struct _Null;
 }  // namespace YAML
 
+#pragma warning(push)
+#pragma warning(disable : 4251)
+#pragma warning(disable : 4275)
+
 namespace YAML {
 class EmitterState;
 
@@ -278,4 +282,5 @@ inline Emitter& operator<<(Emitter& emitter, _Precision precision) {
 }
 }  // namespace YAML
 
+#pragma warning(pop)
 #endif  // EMITTER_H_62B23520_7C8E_11DE_8A39_0800200C9A66
